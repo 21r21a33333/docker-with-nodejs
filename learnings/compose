@@ -1,0 +1,12 @@
+docker-compose up -d 
+ 
+docker-compose down -v 
+
+_________________________________
+
+rebuild - docker compose canot identify changes in the docker file if checks for cached images and uses it 
+to change this behavoir we must rebuild
+
+
+docker-compose up -d --build
+

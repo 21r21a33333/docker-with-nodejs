@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=9SMIJpu9vGw&list=PL8VzFQ8k4U1JEu7BLraz8MdKJILJir7oY&index=11
+
+_________________________________________
+
+commands for runing dev vs prod commands
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v 
