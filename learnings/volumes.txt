@@ -1,0 +1,13 @@
+docker volumes ls 
+
+docker volume prune # remove un neccessary
+docker volume rm <volume id from ls>
+
+
+_______________________________
+we can directly remove volume while remove continers but use 
+
+docker rm <container name >  -fv
+
+f-force delete and v for volumes 
+

@@ -1,0 +1,10 @@
+
+#(bind maps)-shared volumes
+docker run -v ${pwd}:/app -p 3000:3000 --name nodemoncon nodemonimg
+DOCKER LOGS <CONTAINER NAME>
+# PREVENTING NODE MODULES FROM SYNCING TO THE SHARING VOLUME(bind maps)
+docker run -v ${pwd}:/app -v app/node_modules -p 3000:3000 --name nodemoncon nodemonimg
+
+
+# Pead only bind maps
+docker run -v ${pwd}:/app:ro -v app/node_modules -p 3000:3000 --name nodemoncon nodemonimg

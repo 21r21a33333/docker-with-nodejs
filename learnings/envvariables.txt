@@ -1,0 +1,31 @@
+FROM node:latest
+
+
+WORKDIR /app
+COPY package.json .
+RUN npm install
+copy . ./
+ENV PORT 3000
+EXPOSE $PORT
+CMD ["npm","run","dev"]
+
+
+
+#_______________________________
+command in linux to check env  ---> printenv
+
+docker run -v ${pwd}:/app -v /app/node_modules --env PORT=4000 -p 3000:4000 --name <continer_node_mon> <img_name>
+
+
+
+_______________________________
+handling ENV
+
+docker run -v ${pwd}:/app -v /app/node_modules --env-file ./.env -p 3000:4000 --name <continer_node_mon> <img_name>
+
+
+_______________________________________________________________
+
+
+
+
